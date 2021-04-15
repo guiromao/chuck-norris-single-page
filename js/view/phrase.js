@@ -19,8 +19,8 @@ define(['controller/phrase'], function(controller){
         internals.div = catDiv;
 
         var phraseElem = '<span class="phrase center">' + phrase + '</span>';
-        var buttonBack = '<span class="back center clickable" onclick="back()">Go back for more Categories!</span>';
-        var buttonRefresh = '<br><span class="refresh center clickable" onclick="refresh()">Get a new quote!</span>&nbsp;&nbsp;&nbsp;';
+        var buttonBack = '<span class="back center clickable pointer" onclick="back()">Go back for more Categories!</span>';
+        var buttonRefresh = '<br><span class="refresh center clickable pointer" onclick="refresh()">Get a new quote!</span>&nbsp;&nbsp;&nbsp;';
 
         $(phraseElem).appendTo(catDiv);
 

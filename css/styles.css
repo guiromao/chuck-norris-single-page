@@ -32,6 +32,7 @@ body {
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 0px;
+    transition: width 0.5s, height 0.5s;
 }
 
 .round{
@@ -42,6 +43,7 @@ body {
     width: 235px;
     height: 235px;
     transition: width 0.5s, height 0.5s;
+    cursor: pointer;
 }
 
 .main-categories{
@@ -93,8 +95,11 @@ body {
 }
 
 .clickable:hover {
-    cursor: pointer;
     width: 200px;
     height: 40px;
     transition: width 0.5s, height 0.5s;
+}
+
+.pointer {
+    cursor: pointer;
 }
