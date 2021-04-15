@@ -38,13 +38,16 @@ define(['controller/phrase'], function(controller){
 
                 let photoUrl = photoData.results[number].urls.full;
 
-                let picture = '<img class="center" src="' + photoUrl + '" height="200"/><br><br>';
+                let picture = '<img class="center round" src="' + photoUrl + '" height="200"/><br><br><br>';
                 $(picture).appendTo(catDiv);
-                $(buttonRefresh).appendTo(catDiv);
-                $(buttonBack).appendTo(catDiv);
 
                 console.log(photoUrl);
             })
+            .finally(function(){
+                $(buttonRefresh).appendTo(catDiv);
+                $('<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>').appendTo(catDiv);
+                $(buttonBack).appendTo(catDiv);
+            });
     
     }
 

@@ -24,11 +24,20 @@
 }
 
 .pic {
-    border-radius: 10px;
     margin-left: 20px;
     margin-right: 20px;
     margin-top: 10px;
     margin-bottom: 0px;
+}
+
+.round{
+    border-radius: 10px;
+}
+
+.pic:hover {
+    width: 235px;
+    height: 235px;
+    transition: width 0.5s, height 0.5s;
 }
 
 .main-categories{

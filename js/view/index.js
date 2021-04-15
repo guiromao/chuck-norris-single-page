@@ -15,9 +15,9 @@ define(function(){
 
         console.log("I'm in the Index JS!");
 
-        for(var i = 0; i != 1; i++){
+        /*for(var i = 0; i != 1; i++){
             $("<br>").appendTo(catDiv);
-        }
+        }*/
 
         console.log("And now the categories!");
         console.log(categories);
@@ -25,7 +25,7 @@ define(function(){
             console.log("Here's a category: " + category);
             
             listCats = '<table width="70%" class="element" onclick=\'openQuoteOf("phrase-" + \"' + category + '\")\'>';
-            listCats += '<tr><td><span class="line" ><img class="pic" src="./resources/' + category + '.jpg" height="200" width="200" /></span></td></tr>';
+            listCats += '<tr><td><span class="line" ><img class="pic round" src="./resources/' + category + '.jpg" height="200" width="200" /></span></td></tr>';
             listCats += '<tr><td align="top" width="200"><center><span class="title" width="200">' + capitalize(category) + '</span></center><br><br><br></td></tr>';
             listCats += "</table>";
             console.log(listCats);
