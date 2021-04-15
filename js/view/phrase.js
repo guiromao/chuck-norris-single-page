@@ -16,9 +16,11 @@ define(['controller/phrase'], function(controller){
         $(catDiv).empty();
         $(hashtag).appendTo(catDiv);
 
+        internals.div = catDiv;
+
         var phraseElem = '<span class="phrase center">' + phrase + '</span>';
-        var buttonBack = '<button class="back center" onclick="back()">Go back for more Categories!</button>';
-        var buttonRefresh = '<br><button class="refresh center" onclick="refresh()">Get a new quote!</button>&nbsp;&nbsp;&nbsp;';
+        var buttonBack = '<span class="back center clickable" onclick="back()">Go back for more Categories!</span>';
+        var buttonRefresh = '<br><span class="refresh center clickable" onclick="refresh()">Get a new quote!</span>&nbsp;&nbsp;&nbsp;';
 
         $(phraseElem).appendTo(catDiv);
 
@@ -44,7 +46,9 @@ define(['controller/phrase'], function(controller){
                 console.log(photoUrl);
             })
             .finally(function(){
+                
                 $(buttonRefresh).appendTo(catDiv);
+                $(buttonRefresh).click(externals.refresh);
                 $('<span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>').appendTo(catDiv);
                 $(buttonBack).appendTo(catDiv);
             });
@@ -56,7 +60,9 @@ define(['controller/phrase'], function(controller){
     }
 
     refresh = function(){
-        controller.init(internals.word);
+        $(internals.div).empty();
+        window.location.hash = "";
+        window.location.hash = "phrase-" + internals.word;
     }
 
     return externals;
